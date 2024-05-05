@@ -20,9 +20,9 @@ num_classes = 33
 
 data = torch.load('feat2img.bin')
 X_train_tensor = data['x_train']
-y_train_tensor = data['y_train']
+y_train_tensor = data['y_train'].long()
 X_test_tensor = data['x_test']
-y_test_tensor = data['y_test']
+y_test_tensor = data['y_test'].long()
 print(X_train_tensor.shape, y_train_tensor.shape, X_test_tensor.shape, y_test_tensor.shape)
 
 plot_labels = list(tcga_labels.keys())
